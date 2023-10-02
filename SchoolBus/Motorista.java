@@ -1,6 +1,7 @@
 package SchoolBus;
 
 import java.util.Date;
+import java.util.ArrayList;
 
 public class Motorista {
 
@@ -14,6 +15,8 @@ public class Motorista {
   private String rua, complemento, bairro;
   private String telefone;
   private String num_habilitacao, cat_habilitacao;
+
+  private ArrayList<Contrato> contratos;
 
   private Date data_nascimento;
 
@@ -92,6 +95,7 @@ public class Motorista {
     this.data_nascimento = data_nascimento;
     this.numero = numero;
     this.tipo = 0;
+    this.contratos = new ArrayList<Contrato>();
   }
 
   public Motorista( // Terceirizado
@@ -126,6 +130,7 @@ public class Motorista {
     this.numero = numero;
     this.tipo = 1;
     this.num_contrato = num_contrato;
+    this.contratos = new ArrayList<Contrato>();
   }
 
   /*

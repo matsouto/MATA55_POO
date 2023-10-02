@@ -9,6 +9,7 @@ public class Veiculo {
   private String placa, modelo;
   private int ano, capacidade;
   private int num_contrato, tipo;
+  private Contrato contrato;
 
   /*
    * Constructors
