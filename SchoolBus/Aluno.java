@@ -5,17 +5,17 @@ import java.util.Date;
 public class Aluno {
   private String nome_civil, nome, mae, pai, naturalidade;
   private String cpf;
-  private Date data_nascimento;
+  private String data_nascimento;
   private String rua, complemento, bairro;
   private int numero;
   private String telefone;
   private int matricula;
   private String serie;
   private Escola escola;
-  private Rota rota;
+  private PontoDeParada pontoDeParada;
 
   public Aluno(String nome_civil, String nome, String mae, String pai, String naturalidade, String cpf,
-      Date data_nascimento, String rua, String complemento, String bairro, int numero, String telefone, int matricula,
+      String data_nascimento, String rua, String complemento, String bairro, int numero, String telefone, int matricula,
       String serie) {
     this.nome_civil = nome_civil;
     this.nome = nome;
@@ -81,11 +81,11 @@ public class Aluno {
     this.cpf = cpf;
   }
 
-  public Date getData_nascimento() {
+  public String getData_nascimento() {
     return data_nascimento;
   }
 
-  public void setData_nascimento(Date data_nascimento) {
+  public void setData_nascimento(String data_nascimento) {
     this.data_nascimento = data_nascimento;
   }
 

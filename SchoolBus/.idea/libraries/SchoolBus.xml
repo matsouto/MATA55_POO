@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="SchoolBus">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/exIncremental3.zip!/" />
+      <root url="jar://$PROJECT_DIR$/exIncremental2.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
