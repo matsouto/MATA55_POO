@@ -1,4 +1,4 @@
-package 'SchoolBus';
+package SchoolBus;
 
 import java.util.Scanner;
 import java.util.ArrayList;
