@@ -2,10 +2,7 @@ package SchoolBus;
 
 import java.util.Date;
 
-public class Aluno {
-  private String nome_civil, nome, mae, pai, naturalidade;
-  private String cpf;
-  private String data_nascimento;
+public class Aluno extends PessoaFisica {
   private String rua, complemento, bairro;
   private int numero;
   private String telefone;
@@ -14,31 +11,33 @@ public class Aluno {
   private Escola escola;
   private PontoDeParada pontoDeParada;
 
-  public Aluno(String nome_civil, String nome, String mae, String pai, String naturalidade, String cpf,
-      String data_nascimento, String rua, String complemento, String bairro, int numero, String telefone, int matricula,
-      String serie) {
-    this.nome_civil = nome_civil;
-    this.nome = nome;
-    this.mae = mae;
-    this.pai = pai;
-    this.naturalidade = naturalidade;
-    this.cpf = cpf;
-    this.data_nascimento = data_nascimento;
+  public Aluno(String nome_oficial, String cpf_cnpj, String telefone, Endereco endereco, String nome, String mae,
+      String pai, String naturalidade, Date data_nascimento, String rua, String complemento, String bairro, int numero,
+      String telefone2, int matricula, String serie, Escola escola, PontoDeParada pontoDeParada) {
+    super(nome_oficial, cpf_cnpj, telefone, endereco, nome, mae, pai, naturalidade, data_nascimento);
     this.rua = rua;
     this.complemento = complemento;
     this.bairro = bairro;
     this.numero = numero;
-    this.telefone = telefone;
+    telefone = telefone2;
     this.matricula = matricula;
     this.serie = serie;
+    this.escola = escola;
+    this.pontoDeParada = pontoDeParada;
   }
 
-  public String getNome_civil() {
-    return nome_civil;
-  }
-
-  public void setNome_civil(String nome_civil) {
-    this.nome_civil = nome_civil;
+  @Override
+  public void apresentarDados() {
+    super.apresentarDados();
+    System.out.println(
+        "rua: " + this.rua + " complemento: " + this.complemento + " bairro: " + this.bairro + " numero: " + this.numero
+            + " telefone: " +
+            this.telefone +
+            " matricula: " +
+            this.matricula +
+            " serie: " + this.serie +
+            " escola: " + this.escola +
+            " ponto de parada: " + this.pontoDeParada);
   }
 
   public String getNome() {
@@ -71,22 +70,6 @@ public class Aluno {
 
   public void setNaturalidade(String naturalidade) {
     this.naturalidade = naturalidade;
-  }
-
-  public String getCpf() {
-    return cpf;
-  }
-
-  public void setCpf(String cpf) {
-    this.cpf = cpf;
-  }
-
-  public String getData_nascimento() {
-    return data_nascimento;
-  }
-
-  public void setData_nascimento(String data_nascimento) {
-    this.data_nascimento = data_nascimento;
   }
 
   public String getRua() {
@@ -152,13 +135,4 @@ public class Aluno {
   public void setEscola(Escola escola) {
     this.escola = escola;
   }
-
-  public Rota getRota() {
-    return rota;
-  }
-
-  public void setRota(Rota rota) {
-    this.rota = rota;
-  }
-
 }

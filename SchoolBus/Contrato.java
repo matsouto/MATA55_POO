@@ -46,10 +46,9 @@ public class Contrato {
       if (this.veiculos.get(i).getPlaca().equals(veiculo.getPlaca())) {
         this.veiculos.remove(i);
         return true;
-      } else {
-        return false;
       }
     }
+    return false;
   }
 
   public boolean delMotorista(Motorista motorista) {
@@ -57,10 +56,9 @@ public class Contrato {
       if (this.motoristas.get(i).getNome().equals(motorista.getNome())) {
         this.motoristas.remove(i);
         return true;
-      } else {
-        return false;
       }
     }
+    return false;
   }
 
   public int getNum_contrato() {
